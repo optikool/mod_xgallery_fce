@@ -66,6 +66,16 @@ if($items_count > 0) {
 			<strong><?php echo JTEXT::_('MOD_XGALLERY_FCE_SUBMITTER'); ?></strong> <?php echo $item->submitter; ?>
 		</div>
 		<?php } ?>
+		<?php if($params->get('show_tags')) {?>
+		<div class="image-submitter">
+			<?php
+			$item->tags = new JHelperTags;
+			$item->tags->getItemTags('com_xgallery.collection' , $item->id);
+			$item->tagLayout = new JLayoutFile('joomla.content.tags');
+			?>
+			<strong><?php echo JTEXT::_('MOD_XGALLERY_FCE_TAGS'); ?>:</strong> <?php echo $item->tagLayout->render($item->tags->itemTags); ?>
+		</div>
+		<?php } ?>
 		<?php if($params->get('show_quicktake')) {?>
 		<div class="image-introtext">
 			<?php echo $item->introtext; ?>

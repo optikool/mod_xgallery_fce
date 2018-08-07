@@ -9,6 +9,11 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>	
 	<version>1.0.0</version>
 	<description>Displays a list of collections from single or multiple categories.</description>
+
+	<!-- <updateservers>
+    	<server type="collection">https://example.com/list.xml</server>
+    	<server type="extension" priority="2" name="My Extension's Updates">http://example.com/extension.xml</server>
+ 	</updateservers> -->
 	
 	<files>	
 		<filename module="mod_xgallery_fce">mod_xgallery_fce.php</filename>	
@@ -63,6 +68,10 @@
 					<option value="0">JNO</option>
 				</field>
 				<field name="show_hits" class="btn-group" type="radio" default="1" label="MOD_XGALLERY_FCE_SHOW_HITS" description="MOD_XGALLERY_FCE_SHOW_HITS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_tags" class="btn-group" type="radio" default="1" label="MOD_XGALLERY_FCE_SHOW_TAGS" description="MOD_XGALLERY_FCE_SHOW_TAGS_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>

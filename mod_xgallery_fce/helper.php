@@ -118,16 +118,9 @@ class modXGalleryFCEHelper {
 		return $rows;
 	}
 
-	public static function getTags($params) {
-		$this->_item->tags = new JHelperTags;
-        $this->_item->tags->getItemTags('com_xgallery.collection' , $this->_item->id);
-	}
-
-	public static function addStyleSheet($params) {
-		$layout = $params->get('layout', 'default');
-		$layouts = split(':', $layout);	
+	public static function addStyleSheet() {
 		$document = JFactory::getDocument();
-		$document->addStyleSheet(JURI::root(true).'/modules/mod_xgallery_fce/css/'.$layouts[1].'-style.css');
+		$document->addStyleSheet(JURI::root(true).'/modules/mod_xgallery_fce/css/style.css');
 	}
 		
 	public static function getDivWidth($params) {

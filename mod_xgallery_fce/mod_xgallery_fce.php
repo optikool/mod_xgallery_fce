@@ -43,7 +43,7 @@ $lists = modXGalleryFCEHelper::getList($params);
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
 if($params->get('show_css')) {
-	modXGalleryFCEHelper::addStyleSheet($params);
+	modXGalleryFCEHelper::addStyleSheet();
 }
 
 require JModuleHelper::getLayoutPath('mod_xgallery_fce', $params->get('layout', 'default'));
